@@ -1,0 +1,95 @@
+
+
+data_manager {
+    restraint_files = "PHI.cif"
+    real_map_files = "postprocess_masked.mrc"
+    model {
+        file = "8layer_DFNKF_PHI_job172_isolde_for_phenix.cif"
+        type = electron
+    }
+}
+
+resolution = 2.84
+rotamers {
+    fit = all outliers_or_poormap *outliers_and_poormap outliers poormap
+    restraints {
+        enabled = False
+    }
+}
+write_initial_geo_file = False
+write_final_geo_file = False
+write_all_states = False
+write_pkl_stats = False
+model_format = pdb *mmcif
+mask_and_he_map = False
+resolution_factor = 0.25
+ncs_constraints = False
+refine_ncs_operators = Auto
+variable_rama_potential = False
+weight = None
+real_space_target_exclude_selection = "element H or element D"
+show_statistics = True
+show_per_residue = True
+dry_run = False
+random_seed = 0
+nproc = 12
+gradients_method = fd linear quadratic *tricubic
+scattering_table = n_gaussian wk1995 it1992 *electron neutron
+ignore_symmetry_conflicts = False
+wrapping = Auto
+absolute_length_tolerance = 0.01
+absolute_angle_tolerance = 0.01
+
+refinement {
+    run = minimization_global rigid_body local_grid_search morphing         simulated_annealing *adp
+    max_iterations = 100
+    macro_cycles = 5
+    target_bonds_rmsd = 0.01
+    target_angles_rmsd = 1.0
+    backbone_sample = None
+    use_adp_restraints = True
+    atom_radius = 3
+    do_ss_ideal = False
+    do_ccd = False
+    rigid_body {
+    group = None
+    }    
+}
+
+reference_model {
+    enabled = True
+    file = None
+    use_starting_model_as_reference = True
+    sigma = 1.0
+    limit = 15.0
+    hydrogens = False
+    main_chain = True
+    side_chain = True
+    fix_outliers = False
+    strict_rotamer_matching = True
+}
+
+pdb_interpretation {
+    reference_coordinate_restraints {
+        enabled = False
+        exclude_outliers = False
+        selection = "all"
+        sigma = 0.2
+        limit = 1.0
+        top_out = True
+    }
+    automatic_linking {
+        link_metals = True
+        link_carbohydrates = True
+        link_ligands = True
+    }
+    peptide_link {
+        ramachandran_restraints = False
+        restrain_rama_outliers = False
+        restrain_rama_allowed = False
+    }
+    ramachandran_plot_restraints {
+        enabled = False
+    }   
+}
+    

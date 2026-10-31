@@ -1,0 +1,32 @@
+{
+  "_comment": "Paths are relative to this file's folder (or to --data-dir). Class2D job743: all 217,865 DF(Br)NKF(Br) segments, 1024 px box binned to 2.6 A/px, tube diameter 280 A. Select jobs 745-756: classes labelled by hand.",
+  "classification": "data_DFBrNKFBr/run_it014_data.star.gz",
+  "values": {"peptides": [8, 10, 12, 14, 16, 18, 20, 22], "rows": [4, 6, 8, 10]},
+  "labels": {
+    "data_DFBrNKFBr/class_averages_job745.star": ["rows", 4],
+    "data_DFBrNKFBr/class_averages_job746.star": ["rows", 6],
+    "data_DFBrNKFBr/class_averages_job747.star": ["rows", 8],
+    "data_DFBrNKFBr/class_averages_job748.star": ["rows", 10],
+    "data_DFBrNKFBr/class_averages_job749.star": ["peptides", 8],
+    "data_DFBrNKFBr/class_averages_job750.star": ["peptides", 10],
+    "data_DFBrNKFBr/class_averages_job751.star": ["peptides", 12],
+    "data_DFBrNKFBr/class_averages_job752.star": ["peptides", 14],
+    "data_DFBrNKFBr/class_averages_job753.star": ["peptides", 16],
+    "data_DFBrNKFBr/class_averages_job754.star": ["peptides", 18],
+    "data_DFBrNKFBr/class_averages_job755.star": ["peptides", 20],
+    "data_DFBrNKFBr/class_averages_job756.star": ["peptides", 22]
+  },
+  "reclassifications": [
+    {"name": "job785", "view": "peptides", "data": "data_DFBrNKFBr/reclassify/run_it015_data_job785.star.gz",
+     "labels": {"data_DFBrNKFBr/reclassify/class_averages_job789.star": ["peptides", 22],
+                "data_DFBrNKFBr/reclassify/class_averages_job790.star": ["peptides", 24]},
+     "rejected_values": [24],
+     "_comment": "A 10 x 24 label (Select job790) was rejected after inspection (only 6 fibrils); these fibrils stay unassigned."},
+    {"name": "job786", "view": "peptides", "data": "data_DFBrNKFBr/reclassify/run_it015_data_job786.star.gz",
+     "labels": {"data_DFBrNKFBr/reclassify/class_averages_job791.star": ["peptides", 22]}},
+    {"name": "job787", "view": "rows", "data": "data_DFBrNKFBr/reclassify/run_it015_data_job787.star.gz",
+     "labels": {"data_DFBrNKFBr/reclassify/class_averages_job792.star": ["rows", 10]}},
+    {"name": "job788", "view": "rows", "data": "data_DFBrNKFBr/reclassify/run_it015_data_job788.star.gz",
+     "labels": {"data_DFBrNKFBr/reclassify/class_averages_job793.star": ["rows", 8]}}
+  ]
+}

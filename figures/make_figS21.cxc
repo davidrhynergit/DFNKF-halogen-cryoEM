@@ -1,0 +1,79 @@
+# Figure S21: cross-sections of the 4 x 8, 4 x 9 and 4 x 10 DF(I)NKF maps with their models (central layer).
+# Run in ChimeraX from a folder that contains the final models (8x4_Final.cif, 9x4_Final.cif, 10x4_Final.cif)
+# and the unsharpened maps (I_8x4_map.mrc, I_9x4_map.mrc, I_10x4_map.mrc):
+#   cd <that folder>
+#   open make_figS21.cxc
+# Map: mesh at 3.5 sigma, shown within 2.2 A of the central-layer atoms. The panels were assembled in Illustrator.
+# ---- 8x4 ----
+close session
+set bgColor white
+graphics silhouettes false
+lighting soft
+camera ortho
+open "I_8x4_map.mrc"
+open 8x4_Final.cif
+hide #2 atoms
+hide #2 cartoons
+show #2/N6,c5,S5,V4,K5,D5,E5,b5,d5,C5,F5,Q6,a5,I4,P7,X3,e5,L5,U4,B5,T5,G5,M6,Z5,O6,J5,W4,R5,A5,f5,Y6,H6 atoms
+style #2 stick
+size #2 stickRadius 0.25
+color #2 byhetero
+color #2 & C #a0286e
+color #2 & I #8a2be2
+volume #1 style mesh color #5a5a5a sdLevel 3.5 step 1 squareMesh false meshLighting false
+volume zone #1 nearAtoms #2/N6,c5,S5,V4,K5,D5,E5,b5,d5,C5,F5,Q6,a5,I4,P7,X3,e5,L5,U4,B5,T5,G5,M6,Z5,O6,J5,W4,R5,A5,f5,Y6,H6 range 2.2
+view initial #1,2
+# the 4 x 8 structure is viewed from the opposite end of the fibril, so that all cross-sections have the same orientation
+turn y 180 models #1,2 center 166.51,166.54,178.05 coordinateSystem #2
+windowsize 1200 1000
+view #2/N6,c5,S5,V4,K5,D5,E5,b5,d5,C5,F5,Q6,a5,I4,P7,X3,e5,L5,U4,B5,T5,G5,M6,Z5,O6,J5,W4,R5,A5,f5,Y6,H6
+zoom pixelSize 0.18
+save S21_8x4.png width 3600 height 3000 supersample 3
+# ---- 9x4 ----
+close session
+set bgColor white
+graphics silhouettes false
+lighting soft
+camera ortho
+open "I_9x4_map.mrc"
+open 9x4_Final.cif
+hide #2 atoms
+hide #2 cartoons
+show #2/Db,Dx,De,Cm,DS,Dc,Dg,Da,DI,Dh,Du,Dt,Ce,Cz,Cf,Dd,Df,DH,EM,DW,DO,CK,Di,Cd,D1,Eb,Cy,Dz,Dj,EL,DX,Cl,Cv,DT,EK,Dq atoms
+style #2 stick
+size #2 stickRadius 0.25
+color #2 byhetero
+color #2 & C #a0286e
+color #2 & I #8a2be2
+volume #1 style mesh color #5a5a5a sdLevel 3.5 step 1 squareMesh false meshLighting false
+volume zone #1 nearAtoms #2/Db,Dx,De,Cm,DS,Dc,Dg,Da,DI,Dh,Du,Dt,Ce,Cz,Cf,Dd,Df,DH,EM,DW,DO,CK,Di,Cd,D1,Eb,Cy,Dz,Dj,EL,DX,Cl,Cv,DT,EK,Dq range 2.2
+view initial #1,2
+windowsize 1200 1000
+view #2/Db,Dx,De,Cm,DS,Dc,Dg,Da,DI,Dh,Du,Dt,Ce,Cz,Cf,Dd,Df,DH,EM,DW,DO,CK,Di,Cd,D1,Eb,Cy,Dz,Dj,EL,DX,Cl,Cv,DT,EK,Dq
+zoom pixelSize 0.18
+save S21_9x4.png width 3600 height 3000 supersample 3
+# ---- 10x4 ----
+close session
+set bgColor white
+graphics silhouettes false
+lighting soft
+camera ortho
+open "I_10x4_map.mrc"
+open 10x4_Final.cif
+hide #2 atoms
+hide #2 cartoons
+show #2/X5,E5,N5,j5,a6,Q4,d7,i5,F5,K6,U4,T3,D5,k5,h5,G5,S3,V4,L6,c7,C5,l5,P4,Z6,Y5,O5,H5,e4,g5,J4,B5,M5,W5,b6,m5,R4,I5,n6,A6,f5 atoms
+style #2 stick
+size #2 stickRadius 0.25
+color #2 byhetero
+color #2 & C #a0286e
+color #2 & I #8a2be2
+volume #1 style mesh color #5a5a5a sdLevel 3.5 step 1 squareMesh false meshLighting false
+volume zone #1 nearAtoms #2/X5,E5,N5,j5,a6,Q4,d7,i5,F5,K6,U4,T3,D5,k5,h5,G5,S3,V4,L6,c7,C5,l5,P4,Z6,Y5,O5,H5,e4,g5,J4,B5,M5,W5,b6,m5,R4,I5,n6,A6,f5 range 2.2
+view initial #1,2
+windowsize 1200 1000
+view #2/X5,E5,N5,j5,a6,Q4,d7,i5,F5,K6,U4,T3,D5,k5,h5,G5,S3,V4,L6,c7,C5,l5,P4,Z6,Y5,O5,H5,e4,g5,J4,B5,M5,W5,b6,m5,R4,I5,n6,A6,f5
+zoom pixelSize 0.18
+save S21_10x4.png width 3600 height 3000 supersample 3
+close session
+windowsize 900 550

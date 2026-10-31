@@ -1,0 +1,116 @@
+<!-- 4-bromo-L-phenylalanine (CCD 4BF) for ISOLDE (atom types of ISOLDE's amberff14SB.xml).
+     Two templates: 4BF_MID (in-chain, e.g. 4BF2) and 4BF_CTER (C-terminal carboxylate, e.g. 4BF5 with OXT).
+     The names deliberately differ from the residue name 4BF, so ISOLDE (1.10 and 1.12) picks the right one
+     by topology. Load with "Load residue parameters" (General tab) or "isolde load parameters <file>" (1.12).
+     Backbone/ring types and charges from ff14SB PHE (mid) and CPHE (C-terminal); HZ replaced by BR.
+     CZ/BR charges split the PHE/CPHE CZ+HZ total so the residue charge is unchanged (BR -0.070).
+     C-Br 1.90 A, C-C-Br 120 deg, Br vdW Rmin/2 2.22 A, eps 0.32 kcal/mol (GAFF-like). No sigma-hole. -->
+<ForceField>
+  <AtomTypes>
+    <Type name="PBF_BR" class="PBF_BR" element="Br" mass="79.904"/>
+  </AtomTypes>
+  <Residues>
+    <Residue name="4BF_MID">
+      <Atom name="N" type="N" charge="-0.4157"/>
+      <Atom name="H" type="H" charge="0.2719"/>
+      <Atom name="CA" type="CX" charge="-0.0024"/>
+      <Atom name="HA" type="H1" charge="0.0978"/>
+      <Atom name="CB" type="CT" charge="-0.0343"/>
+      <Atom name="HB2" type="HC" charge="0.0295"/>
+      <Atom name="HB3" type="HC" charge="0.0295"/>
+      <Atom name="CG" type="CA" charge="0.0118"/>
+      <Atom name="CD1" type="CA" charge="-0.1256"/>
+      <Atom name="HD1" type="HA" charge="0.133"/>
+      <Atom name="CE1" type="CA" charge="-0.1704"/>
+      <Atom name="HE1" type="HA" charge="0.143"/>
+      <Atom name="CZ" type="CA" charge="0.0925"/>
+      <Atom name="BR" type="PBF_BR" charge="-0.07"/>
+      <Atom name="CE2" type="CA" charge="-0.1704"/>
+      <Atom name="HE2" type="HA" charge="0.143"/>
+      <Atom name="CD2" type="CA" charge="-0.1256"/>
+      <Atom name="HD2" type="HA" charge="0.133"/>
+      <Atom name="C" type="C" charge="0.5973"/>
+      <Atom name="O" type="O" charge="-0.5679"/>
+      <Bond atomName1="N" atomName2="H"/>
+      <Bond atomName1="N" atomName2="CA"/>
+      <Bond atomName1="CA" atomName2="HA"/>
+      <Bond atomName1="CA" atomName2="CB"/>
+      <Bond atomName1="CA" atomName2="C"/>
+      <Bond atomName1="CB" atomName2="HB2"/>
+      <Bond atomName1="CB" atomName2="HB3"/>
+      <Bond atomName1="CB" atomName2="CG"/>
+      <Bond atomName1="CG" atomName2="CD1"/>
+      <Bond atomName1="CG" atomName2="CD2"/>
+      <Bond atomName1="CD1" atomName2="HD1"/>
+      <Bond atomName1="CD1" atomName2="CE1"/>
+      <Bond atomName1="CE1" atomName2="HE1"/>
+      <Bond atomName1="CE1" atomName2="CZ"/>
+      <Bond atomName1="CZ" atomName2="BR"/>
+      <Bond atomName1="CZ" atomName2="CE2"/>
+      <Bond atomName1="CE2" atomName2="HE2"/>
+      <Bond atomName1="CE2" atomName2="CD2"/>
+      <Bond atomName1="CD2" atomName2="HD2"/>
+      <Bond atomName1="C" atomName2="O"/>
+      <ExternalBond atomName="N"/>
+      <ExternalBond atomName="C"/>
+    </Residue>
+    <Residue name="4BF_CTER">
+      <Atom name="N" type="N" charge="-0.3821"/>
+      <Atom name="H" type="H" charge="0.2681"/>
+      <Atom name="CA" type="CX" charge="-0.1825"/>
+      <Atom name="HA" type="H1" charge="0.1098"/>
+      <Atom name="CB" type="CT" charge="-0.0959"/>
+      <Atom name="HB2" type="HC" charge="0.0443"/>
+      <Atom name="HB3" type="HC" charge="0.0443"/>
+      <Atom name="CG" type="CA" charge="0.0552"/>
+      <Atom name="CD1" type="CA" charge="-0.13"/>
+      <Atom name="HD1" type="HA" charge="0.1408"/>
+      <Atom name="CE1" type="CA" charge="-0.1847"/>
+      <Atom name="HE1" type="HA" charge="0.1461"/>
+      <Atom name="CZ" type="CA" charge="0.1036"/>
+      <Atom name="BR" type="PBF_BR" charge="-0.07"/>
+      <Atom name="CE2" type="CA" charge="-0.1847"/>
+      <Atom name="HE2" type="HA" charge="0.1461"/>
+      <Atom name="CD2" type="CA" charge="-0.13"/>
+      <Atom name="HD2" type="HA" charge="0.1408"/>
+      <Atom name="C" type="C" charge="0.766"/>
+      <Atom name="O" type="O2" charge="-0.8026"/>
+      <Atom name="OXT" type="O2" charge="-0.8026"/>
+      <Bond atomName1="N" atomName2="H"/>
+      <Bond atomName1="N" atomName2="CA"/>
+      <Bond atomName1="CA" atomName2="HA"/>
+      <Bond atomName1="CA" atomName2="CB"/>
+      <Bond atomName1="CA" atomName2="C"/>
+      <Bond atomName1="CB" atomName2="HB2"/>
+      <Bond atomName1="CB" atomName2="HB3"/>
+      <Bond atomName1="CB" atomName2="CG"/>
+      <Bond atomName1="CG" atomName2="CD1"/>
+      <Bond atomName1="CG" atomName2="CD2"/>
+      <Bond atomName1="CD1" atomName2="HD1"/>
+      <Bond atomName1="CD1" atomName2="CE1"/>
+      <Bond atomName1="CE1" atomName2="HE1"/>
+      <Bond atomName1="CE1" atomName2="CZ"/>
+      <Bond atomName1="CZ" atomName2="BR"/>
+      <Bond atomName1="CZ" atomName2="CE2"/>
+      <Bond atomName1="CE2" atomName2="HE2"/>
+      <Bond atomName1="CE2" atomName2="CD2"/>
+      <Bond atomName1="CD2" atomName2="HD2"/>
+      <Bond atomName1="C" atomName2="O"/>
+      <Bond atomName1="C" atomName2="OXT"/>
+      <ExternalBond atomName="N"/>
+    </Residue>
+  </Residues>
+  <HarmonicBondForce>
+    <Bond type1="CA" type2="PBF_BR" length="0.1900" k="143929.6"/>
+  </HarmonicBondForce>
+  <HarmonicAngleForce>
+    <Angle type1="CA" type2="CA" type3="PBF_BR" angle="2.0943951" k="527.18"/>
+  </HarmonicAngleForce>
+  <PeriodicTorsionForce>
+    <Improper type1="CA" type2="" type3="" type4="PBF_BR" periodicity1="2" phase1="3.14159265359" k1="4.6024"/>
+  </PeriodicTorsionForce>
+  <NonbondedForce coulomb14scale="0.833333333333" lj14scale="0.5">
+    <UseAttributeFromResidue name="charge"/>
+    <Atom type="PBF_BR" sigma="0.395558" epsilon="1.33888"/>
+  </NonbondedForce>
+</ForceField>
