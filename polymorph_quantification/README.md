@@ -34,12 +34,17 @@ interval is given by the 2.5th and 97.5th percentiles. Micrographs, not segments
 because segments of one fibril, and fibrils on one micrograph, are not independent.
 
 - DF(Br)NKF(Br): `--assignment filament_assignment.csv`
-- DF(I)NKF: the polymorphs were separated with FilamentTools on 1,000 randomly selected micrographs;
-  pass the cluster STAR files, one per polymorph, e.g.
-  `--star 4x7=cluster_4x7.star 4x8=cluster_4x8.star 4x9=cluster_4x9.star 4x10=cluster_4x10.star 4x11=cluster_4x11.star`
+- DF(I)NKF: `--assignment data_DFINKF/DFINKF_fibrils_FilamentTools.csv`. The fibrils on 1,000
+  randomly selected micrographs were picked by hand and separated into polymorphs with FilamentTools.
+  This table (one line per fibril) was made from the particle STAR file of each cluster with
+  `clusters_to_fibril_table.py`, which also checks that no fibril is split over two clusters.
+
+The interval limits depend slightly on the random draw: with other seeds they move by about 0.1
+percentage point. The fractions themselves do not change.
 
 `relion_star.py` is a small STAR reader (standard library only) used by both scripts.
 
 ## Expected output
 
-`expected_output/` holds the DF(Br)NKF(Br) results reported in the paper (Tables S5 and S6).
+`expected_output/` holds the results reported in the paper (Tables S5 and S6, Figures S13 and S14),
+as produced by these scripts with seed 1.

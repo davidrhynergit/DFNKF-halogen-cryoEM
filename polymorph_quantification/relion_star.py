@@ -44,7 +44,7 @@ def read_block(path, block="data_particles"):
             if s == "loop_":
                 in_loop = True
                 continue
-            if in_loop and s.startswith("_rln"):
+            if in_loop and s.startswith("_"):   # RELION and extra columns (e.g. FilamentTools _clusterLabel)
                 cols.append(s.split()[0][1:])
                 continue
     while header and header[-1].strip() == "":

@@ -12,7 +12,7 @@ Contact for this code: David Rhyner, ETH Zurich.
 
 | Folder | What it does | Paper |
 |---|---|---|
-| `polymorph_quantification/` | Per-fibril polymorph assignment of DF(Br)NKF(Br) from RELION 2D classes, and bootstrap confidence intervals of the polymorph fractions (resampling micrographs). Includes the RELION input files for DF(Br)NKF(Br), so the numbers can be reproduced. | Methods; Tables S5, S6; Figures S13, S14 |
+| `polymorph_quantification/` | Per-fibril polymorph assignment of DF(Br)NKF(Br) from RELION 2D classes, and bootstrap confidence intervals of the polymorph fractions (resampling micrographs). Includes the input data of both peptides, so the numbers can be reproduced. | Methods; Tables S5, S6; Figures S13, S14 |
 | `handedness_test/` | Handedness test with an ideal parallel beta-strand (L and D) fitted at every peptide position in the final map and in its mirror image. | Figure S20g |
 | `model_building/` | ISOLDE parameters for 4-iodo-Phe (PHI) and 4-bromo-Phe (4BF), ChimeraX/ISOLDE restraint commands, Phenix restraint dictionaries and ADP-refinement settings, helper scripts. | Methods, Table S1 |
 | `halogen_geometry/` | Halogen...O contacts (distances and angles) in the central layer of the models. | Table S2 |
@@ -35,7 +35,13 @@ python bootstrap_polymorph_fractions.py --assignment results/filament_assignment
 ```
 
 This takes about a minute and gives 5,966 assigned fibrils (207,060 segments, 95.0%) in 27
-polymorphs. The outputs should match `expected_output/` (Tables S5 and S6).
+polymorphs. For DF(I)NKF:
+
+```
+python bootstrap_polymorph_fractions.py --assignment data_DFINKF/DFINKF_fibrils_FilamentTools.csv --out results/bootstrap_DFINKF.csv
+```
+
+The outputs should match `expected_output/` (Tables S5 and S6).
 
 ## Licence
 
